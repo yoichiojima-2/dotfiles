@@ -96,11 +96,6 @@ fi
 # read .env
 [ -s $HOME/.env.sh ] && source $HOME/.env.sh
 
-# python activation
-activate-python() {
-    source ~/python-venv/general-purpose/bin/activate
-}
-
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
 
