@@ -88,6 +88,12 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
 [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
 
+# openjdk
+export PATH="#$(brew --prefix openjdk)/bin:$PATH"
+
+# hadoop
+export HADOOP_HOME=$(brew --prefix hadoop)
+
 # openai-rust
 if [[ ":$PATH:" != *":$HOME/Developer/repo/openai-rust/target/release:"* ]]; then
     export PATH="$HOME/Developer/repo/openai-rust/target/release:$PATH"
