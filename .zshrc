@@ -91,16 +91,13 @@ export NVM_DIR="$HOME/.nvm"
 # openjdk
 export PATH="$(brew --prefix openjdk)/bin:$PATH"
 
-# hadoop
-export HADOOP_HOME="$(brew --prefix hadoop)"
-
 # openai-rust
 if [[ ":$PATH:" != *":$HOME/Developer/repo/openai-rust/target/release:"* ]]; then
     export PATH="$HOME/Developer/repo/openai-rust/target/release:$PATH"
 fi
 
 # read .env
-[ -s $HOME/.env.sh ] && source $HOME/.env.sh
+source $HOME/.env.sh
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
