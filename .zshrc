@@ -92,7 +92,7 @@ export NVM_DIR="$HOME/.nvm"
 export PATH="$(brew --prefix openjdk)/bin:$PATH"
 
 # hadoop
-export HADOOP_HOME=$(brew --prefix hadoop)
+export HADOOP_HOME="$(brew --prefix hadoop)"
 
 # openai-rust
 if [[ ":$PATH:" != *":$HOME/Developer/repo/openai-rust/target/release:"* ]]; then
