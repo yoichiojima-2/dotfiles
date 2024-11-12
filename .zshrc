@@ -122,5 +122,4 @@ source $HOME/.env.sh
 #
 # Example aliases
 alias vi="nvim"
-alias vim="nvim"
 alias cat="bat"
