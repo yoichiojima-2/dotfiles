@@ -89,7 +89,9 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
 
 # openjdk
-export PATH="$(brew --prefix openjdk)/bin:$PATH"
+if [[ ":$PATH:" != *":$(brew --prefix openjdk):"* ]]; then
+    export PATH="$(brew --prefix openjdk)/bin:$PATH"
+fi
 
 # hadoop
 export HADOOP_CONF_DIR=$(brew --prefix hadoop)/libexec/etc/hadoop
