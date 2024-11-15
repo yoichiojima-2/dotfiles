@@ -123,7 +123,7 @@ source $HOME/.env.sh
 # For a full list of active aliases, run `alias`.
 #
 # Example aliases
-alias cm="commmit"
+alias cm="commit"
 alias l="less"
 alias vi="nvim"
 alias cat="bat"
