@@ -78,6 +78,10 @@ source $ZSH/oh-my-zsh.sh
 
 # export MANPATH="/usr/local/man:$MANPATH"
 
+# git
+git config --global user.name "yoichi ojima"
+git config --global user.email "yoichiojima@gmail.com"
+
 # brew
 if [[ ":$PATH:" != *":/opt/homebrew/bin:"* ]]; then
     export PATH="/opt/homebrew/bin:$PATH"
@@ -123,8 +127,8 @@ fi
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
-#
-# Example aliases
+
+# alias
 alias cm="commit"
 alias l="less"
 alias vi="nvim"
