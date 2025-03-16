@@ -78,6 +78,11 @@ source $ZSH/oh-my-zsh.sh
 
 # export MANPATH="/usr/local/man:$MANPATH"
 
+# brew
+if [[ ":$PATH:" != *":/opt/homebrew/bin:"* ]]; then
+    export PATH="/opt/homebrew/bin:$PATH"
+fi
+
 # pyenv
 if [[ ":$PATH:" != *":$HOME/.pyenv/shims:"* ]]; then
     export PATH="$HOME/.pyenv/shims:$PATH"
