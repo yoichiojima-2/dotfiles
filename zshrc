@@ -101,9 +101,6 @@ if [[ ":$PATH:" != *":$HOME/Developer/repo/openai-rust/target/release:"* ]]; the
     export PATH="$HOME/Developer/repo/openai-rust/target/release:$PATH"
 fi
 
-# read .env
-source $HOME/.env.sh
-
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
 
