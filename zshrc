@@ -38,8 +38,3 @@ if [[ ":$PATH:" != *":$HOME/Developer/repo/openai-rust/target/release:"* ]]; the
     export PATH="$HOME/Developer/repo/openai-rust/target/release:$PATH"
 fi
 
-# alias
-alias cm="commit"
-alias l="less"
-alias vi="nvim"
-alias cat="bat"
