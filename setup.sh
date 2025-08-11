@@ -38,7 +38,7 @@ create_symlink "${DOTFILES_DIR}/zshrc" "${HOME}/.zshrc"
 
 # Neovim configuration
 echo "Setting up Neovim configuration..."
-create_symlink "${DOTFILES_DIR}/init.vim" "${HOME}/.config/nvim/init.vim"
+create_symlink "${DOTFILES_DIR}/init.lua" "${HOME}/.config/nvim/init.lua"
 
 # Git configuration
 echo "Setting up Git configuration..."

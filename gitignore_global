@@ -57,7 +57,6 @@ yarn-error.log*
 __pycache__/
 *.py[cod]
 *$py.class
-*.so
 .Python
 build/
 develop-eggs/
@@ -92,18 +91,12 @@ target/
 Cargo.lock
 
 # Go
-*.exe
 *.exe~
-*.dll
-*.so
-*.dylib
 *.test
 *.out
 go.work
 
 # Java
-*.class
-*.jar
 *.war
 *.ear
 *.logs

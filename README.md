@@ -5,7 +5,7 @@ Central repository for all reusable configuration files.
 ## Contents
 
 - `zshrc` - Zsh shell configuration
-- `init.vim` - Neovim configuration
+- `init.lua` - Neovim configuration (Lua-based)
 - `gitconfig` - Git global configuration
 - `gitignore_global` - Global Git ignore patterns
 - `secrets.sh` - Secure secrets management using macOS Keychain

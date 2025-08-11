@@ -7,7 +7,9 @@
       "Bash(git commit:*)",
       "Bash(chmod:*)",
       "Bash(bash:*)",
-      "Bash(python3:*)"
+      "Bash(python3:*)",
+      "Bash(git rm:*)",
+      "Bash(rm:*)"
     ],
     "deny": []
   }
