@@ -17,3 +17,6 @@
 *.tmp
 *.swp
 *~
+
+# Generated configuration files with secrets
+mcp-settings.json
