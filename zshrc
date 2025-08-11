@@ -6,18 +6,14 @@ DISABLE_UNTRACKED_FILES_DIRTY="true"
 plugins=(git)
 source $ZSH/oh-my-zsh.sh
 
-# git
-git config --global user.name "yoichi ojima"
-git config --global user.email "yoichiojima@gmail.com"
-
 # brew
 if [[ ":$PATH:" != *":/opt/homebrew/bin:"* ]]; then
     export PATH="/opt/homebrew/bin:$PATH"
 fi
 
 # pyenv
-if [[ ":$PATH:" != *":$HOME/.pyenv/shims:"* ]]; then
-    export PATH="$HOME/.pyenv/shims:$PATH"
+if command -v pyenv >/dev/null 2>&1; then
+    eval "$(pyenv init -)"
 fi
 
 # nvm
@@ -26,15 +22,23 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
 
 # openjdk
-if [[ ":$PATH:" != *":$(brew --prefix openjdk):"* ]]; then
+if command -v brew >/dev/null 2>&1 && brew list openjdk >/dev/null 2>&1; then
     export PATH="$(brew --prefix openjdk)/bin:$PATH"
 fi
 
 # hadoop
-export HADOOP_CONF_DIR=$(brew --prefix hadoop)/libexec/etc/hadoop
-
-# openai-rust
-if [[ ":$PATH:" != *":$HOME/Developer/repo/openai-rust/target/release:"* ]]; then
-    export PATH="$HOME/Developer/repo/openai-rust/target/release:$PATH"
+if command -v brew >/dev/null 2>&1 && brew list hadoop >/dev/null 2>&1; then
+    export HADOOP_CONF_DIR="$(brew --prefix hadoop)/libexec/etc/hadoop"
 fi
 
+# openai-rust
+OPENAI_RUST_BIN="$HOME/Developer/repo/openai-rust/target/release"
+if [[ -d "$OPENAI_RUST_BIN" && ":$PATH:" != *":$OPENAI_RUST_BIN:"* ]]; then
+    export PATH="$OPENAI_RUST_BIN:$PATH"
+fi
+
+# secrets management
+SECRETS_FILE="$HOME/Developer/repo/dotfiles/secrets.sh"
+if [[ -f "$SECRETS_FILE" ]]; then
+    source "$SECRETS_FILE"
+fi
