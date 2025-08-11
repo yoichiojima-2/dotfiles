@@ -1,0 +1,19 @@
+# Environment files
+.env
+.env.local
+
+# Backup files
+*.backup
+*.bak
+
+# macOS
+.DS_Store
+
+# Editor directories
+.vscode/
+.idea/
+
+# Temporary files
+*.tmp
+*.swp
+*~
