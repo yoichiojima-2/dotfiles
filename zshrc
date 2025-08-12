@@ -38,7 +38,7 @@ if [[ -d "$OPENAI_RUST_BIN" && ":$PATH:" != *":$OPENAI_RUST_BIN:"* ]]; then
 fi
 
 # secrets management
-SECRETS_FILE="$HOME/Developer/repo/dotfiles/secrets.sh"
+SECRETS_FILE="$HOME/Developer/repo/macos-setup/scripts/secrets.sh"
 if [[ -f "$SECRETS_FILE" ]]; then
     source "$SECRETS_FILE"
 fi
