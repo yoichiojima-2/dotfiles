@@ -26,6 +26,11 @@ if command -v brew >/dev/null 2>&1 && brew list openjdk >/dev/null 2>&1; then
     export PATH="$(brew --prefix openjdk)/bin:$PATH"
 fi
 
+# java home - openjdk 17
+if [[ -d "/opt/homebrew/opt/openjdk@17/libexec/openjdk.jdk/Contents/Home" ]]; then
+    export JAVA_HOME="/opt/homebrew/opt/openjdk@17/libexec/openjdk.jdk/Contents/Home"
+fi
+
 # hadoop
 if command -v brew >/dev/null 2>&1 && brew list hadoop >/dev/null 2>&1; then
     export HADOOP_CONF_DIR="$(brew --prefix hadoop)/libexec/etc/hadoop"
