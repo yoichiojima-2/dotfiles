@@ -11,6 +11,9 @@ vim.opt.rtp:prepend(lazypath)
 vim.g.mapleader = " "
 vim.g.maplocalleader = "\\"
 
+-- Truecolor (needed for nice colors in terminals)
+vim.o.termguicolors = true
+
 -- Fix filetype detection for Go files
 vim.filetype.add({
   filename = {
@@ -22,6 +25,24 @@ vim.filetype.add({
 
 -- Setup lazy.nvim with plugins
 require("lazy").setup({
+  -- GitHub colorscheme
+  {
+    "projekt0n/github-nvim-theme",
+    lazy = false,            -- load at startup
+    priority = 1000,         -- load before other UI plugins
+    opts = {
+      options = {
+        transparent = false, -- set true if you want transparent background
+        terminal_colors = true,
+      },
+    },
+    config = function(_, opts)
+      require("github-theme").setup(opts)
+      vim.cmd("colorscheme github_dark")  -- pick one: github_dark(_default|_dimmed) or github_light(_default)
+    end,
+  },
+
+  -- Treesitter
   {
     "nvim-treesitter/nvim-treesitter",
     build = ":TSUpdate",
