@@ -14,6 +14,10 @@ vim.g.maplocalleader = "\\"
 -- Truecolor (needed for nice colors in terminals)
 vim.o.termguicolors = true
 
+-- Line numbers
+vim.o.number = true
+vim.o.relativenumber = true
+
 -- Fix filetype detection for Go files
 vim.filetype.add({
   filename = {
