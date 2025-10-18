@@ -47,3 +47,7 @@ SECRETS_FILE="$HOME/Developer/repo/macos-setup/scripts/secrets.sh"
 if [[ -f "$SECRETS_FILE" ]]; then
     source "$SECRETS_FILE"
 fi
+
+# alias
+alias dbx=databricks
+alias vi=nvim
