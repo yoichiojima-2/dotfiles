@@ -48,6 +48,11 @@ if [[ -f "$SECRETS_FILE" ]]; then
     source "$SECRETS_FILE"
 fi
 
+# load .env if exists
+if [[ -f "$HOME/.env" ]]; then
+    source "$HOME/.env"
+fi
+
 # alias
 alias dbx=databricks
 alias vi=nvim
