@@ -56,3 +56,4 @@ fi
 # alias
 alias dbx=databricks
 alias vi=nvim
+alias cat=bat
