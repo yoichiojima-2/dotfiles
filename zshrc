@@ -57,3 +57,10 @@ fi
 alias dbx=databricks
 alias vi=nvim
 alias cat=bat
+
+# antigravity
+export PATH="/Users/yo/.antigravity/antigravity/bin:$PATH"
+export PATH="/Users/yo/.antigravity/antigravity/bin:$PATH"
+
+# go
+export PATH=$PATH:$(dirname $(go list -f '{{.Target}}' .))
