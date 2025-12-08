@@ -62,3 +62,5 @@ alias cat=bat
 export PATH="/Users/yo/.antigravity/antigravity/bin:$PATH"
 export PATH="/Users/yo/.antigravity/antigravity/bin:$PATH"
 
+# claude
+ANTHROPIC_MODEL="claude-opus-4-5-20251101"
