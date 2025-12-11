@@ -42,12 +42,6 @@ if [[ -d "$OPENAI_RUST_BIN" && ":$PATH:" != *":$OPENAI_RUST_BIN:"* ]]; then
     export PATH="$OPENAI_RUST_BIN:$PATH"
 fi
 
-# secrets management
-SECRETS_FILE="$HOME/Developer/repo/macos-setup/scripts/secrets.sh"
-if [[ -f "$SECRETS_FILE" ]]; then
-    source "$SECRETS_FILE"
-fi
-
 # load .env if exists
 if [[ -f "$HOME/.env" ]]; then
     source "$HOME/.env"
@@ -59,7 +53,6 @@ alias vi=nvim
 alias cat=bat
 
 # antigravity
-export PATH="/Users/yo/.antigravity/antigravity/bin:$PATH"
 export PATH="/Users/yo/.antigravity/antigravity/bin:$PATH"
 
 # claude
