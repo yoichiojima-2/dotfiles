@@ -36,12 +36,6 @@ if command -v brew >/dev/null 2>&1 && brew list hadoop >/dev/null 2>&1; then
     export HADOOP_CONF_DIR="$(brew --prefix hadoop)/libexec/etc/hadoop"
 fi
 
-# openai-rust
-OPENAI_RUST_BIN="$HOME/Developer/repo/openai-rust/target/release"
-if [[ -d "$OPENAI_RUST_BIN" && ":$PATH:" != *":$OPENAI_RUST_BIN:"* ]]; then
-    export PATH="$OPENAI_RUST_BIN:$PATH"
-fi
-
 # load .env if exists
 if [[ -f "$HOME/.env" ]]; then
     source "$HOME/.env"
@@ -57,3 +51,6 @@ export PATH="/Users/yo/.antigravity/antigravity/bin:$PATH"
 
 # claude
 export ANTHROPIC_MODEL="claude-opus-4-5-20251101"
+
+# git
+GIT_SSH_COMMAND="ssh -i ~/.ssh/id_ed25519_personal"

@@ -45,6 +45,10 @@ echo "Setting up Git configuration..."
 create_symlink "${DOTFILES_DIR}/gitconfig" "${HOME}/.gitconfig"
 create_symlink "${DOTFILES_DIR}/gitignore_global" "${HOME}/.gitignore_global"
 
+# Tmux configuration
+echo "Setting up Tmux configuration..."
+create_symlink "${DOTFILES_DIR}/tmux.conf" "${HOME}/.tmux.conf"
+
 echo ""
 echo "✓ Dotfiles setup complete!"
 echo ""

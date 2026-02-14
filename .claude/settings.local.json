@@ -9,7 +9,8 @@
       "Bash(bash:*)",
       "Bash(python3:*)",
       "Bash(git rm:*)",
-      "Bash(rm:*)"
+      "Bash(rm:*)",
+      "Bash(./setup.sh)"
     ],
     "deny": []
   }
