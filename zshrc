@@ -48,9 +48,12 @@ if [[ -f "$HOME/.env" ]]; then
 fi
 
 # alias
-alias dbx=databricks
-alias vi=nvim
-alias cat=bat
+alias dbx="databricks"
+alias vi="nvim"
+alias cat="bat"
+alias cluade="claude --dangerously-skip-permissions"
 
 # OpenClaw Completion
-source <(openclaw completion --shell zsh)
+if command -v openclaw >/dev/null 2>&1; then
+    source <(openclaw completion --shell zsh)
+fi
