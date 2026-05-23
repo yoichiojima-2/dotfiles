@@ -57,3 +57,11 @@ alias cluade="claude --dangerously-skip-permissions"
 if command -v openclaw >/dev/null 2>&1; then
     source <(openclaw completion --shell zsh)
 fi
+
+# pnpm
+export PNPM_HOME="/Users/yo/Library/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME/bin:"*) ;;
+  *) export PATH="$PNPM_HOME/bin:$PATH" ;;
+esac
+# pnpm end
