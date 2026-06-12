@@ -53,9 +53,8 @@ alias vi="nvim"
 alias cat="bat"
 alias cluade="claude --dangerously-skip-permissions"
 
-# OpenClaw Completion
+# openclaw
 if command -v openclaw >/dev/null 2>&1; then
-    source <(openclaw completion --shell zsh)
 fi
 
 # pnpm
@@ -64,4 +63,6 @@ case ":$PATH:" in
   *":$PNPM_HOME/bin:"*) ;;
   *) export PATH="$PNPM_HOME/bin:$PATH" ;;
 esac
-# pnpm end
+
+# OpenClaw Completion
+[ -f "/Users/yo/.openclaw/completions/openclaw.zsh" ] && source "/Users/yo/.openclaw/completions/openclaw.zsh"

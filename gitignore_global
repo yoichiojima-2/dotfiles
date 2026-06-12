@@ -101,3 +101,5 @@ go.work
 *.ear
 *.logs
 hs_err_pid*
+
+**/.claude/settings.local.json
