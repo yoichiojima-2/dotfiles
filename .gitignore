@@ -1,2 +1,5 @@
 # Backup files from setup script
 *.backup
+
+# Local Claude Code settings
+.claude/settings.local.json

@@ -12,6 +12,9 @@ Clean, minimal configuration files for development environment.
 ### Editor
 - `init.lua` - Neovim configuration (minimal, treesitter-based)
 
+### Terminal
+- `tmux.conf` - Tmux configuration
+
 ### Setup
 - `setup.sh` - Script to create symlinks for configuration files
 
@@ -19,7 +22,7 @@ Clean, minimal configuration files for development environment.
 
 ```bash
 # Clone and setup
-git clone <your-repo-url> ~/Developer/repo/dotfiles
+git clone git@github.com:yoichiojima-2/dotfiles.git ~/Developer/repo/dotfiles
 cd ~/Developer/repo/dotfiles
 ./setup.sh
 ```
@@ -31,5 +34,5 @@ cd ~/Developer/repo/dotfiles
 
 ## Philosophy
 
-Pure configuration files only. No installation scripts, no bloat.
+Pure configuration files only — `setup.sh` just symlinks them into place.
 Each file serves a specific purpose and is kept minimal.

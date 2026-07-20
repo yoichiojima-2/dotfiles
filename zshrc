@@ -53,10 +53,6 @@ alias vi="nvim"
 alias cat="bat"
 alias cluade="claude --dangerously-skip-permissions"
 
-# openclaw
-if command -v openclaw >/dev/null 2>&1; then
-fi
-
 # pnpm
 export PNPM_HOME="/Users/yo/Library/pnpm"
 case ":$PATH:" in
