@@ -29,8 +29,7 @@ cd ~/Developer/repo/dotfiles
 
 ## Related Repositories
 
-- **macos-setup** - System installation, secrets management, security guides
-- **vibe** - MCP configuration and AI tooling deployment
+- [**vibe**](https://github.com/yoichiojima-2/vibe) - MCP configuration and AI tooling deployment
 
 ## Philosophy
 

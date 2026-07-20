@@ -51,7 +51,6 @@ fi
 alias dbx="databricks"
 alias vi="nvim"
 alias cat="bat"
-alias cluade="claude --dangerously-skip-permissions"
 
 # pnpm
 export PNPM_HOME="/Users/yo/Library/pnpm"
