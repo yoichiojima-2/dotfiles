@@ -21,43 +21,8 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
 [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
 
-# openjdk
-if command -v brew >/dev/null 2>&1 && brew list openjdk >/dev/null 2>&1; then
-    export PATH="$(brew --prefix openjdk)/bin:$PATH"
-fi
-
-# java home - openjdk 17
-if [[ -d "/opt/homebrew/opt/openjdk@17/libexec/openjdk.jdk/Contents/Home" ]]; then
-    export JAVA_HOME="/opt/homebrew/opt/openjdk@17/libexec/openjdk.jdk/Contents/Home"
-fi
-
-# hadoop
-if command -v brew >/dev/null 2>&1 && brew list hadoop >/dev/null 2>&1; then
-    export HADOOP_CONF_DIR="$(brew --prefix hadoop)/libexec/etc/hadoop"
-fi
-
-# openai-rust
-OPENAI_RUST_BIN="$HOME/Developer/repo/openai-rust/target/release"
-if [[ -d "$OPENAI_RUST_BIN" && ":$PATH:" != *":$OPENAI_RUST_BIN:"* ]]; then
-    export PATH="$OPENAI_RUST_BIN:$PATH"
-fi
-
 # load .env if exists
 if [[ -f "$HOME/.env" ]]; then
     source "$HOME/.env"
 fi
 
-# alias
-alias dbx="databricks"
-alias vi="nvim"
-alias cat="bat"
-
-# pnpm
-export PNPM_HOME="/Users/yo/Library/pnpm"
-case ":$PATH:" in
-  *":$PNPM_HOME/bin:"*) ;;
-  *) export PATH="$PNPM_HOME/bin:$PATH" ;;
-esac
-
-# OpenClaw Completion
-[ -f "/Users/yo/.openclaw/completions/openclaw.zsh" ] && source "/Users/yo/.openclaw/completions/openclaw.zsh"
